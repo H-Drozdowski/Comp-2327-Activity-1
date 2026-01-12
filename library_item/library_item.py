@@ -11,15 +11,12 @@ class LibraryItem:
 
     def __init__(self, title : str, author : str, genre : Genre):
         """
-        Docstring for __init__
-        
-        :param self: Description
-        :param title: The title of the library item
-        :type title: str
-        :param author: The author of the library item
-        :type author: str
-        :param genre: The genre of the library item
-        :type genre: Genre
+        Initializes a new instance of the LibraryItem class.
+
+        args:
+            title (str): The title of the library item
+            author (str): The title of the author of the library item
+            genre: (Genre): The genre of the library item
         """
 
         #If the length of the title is empty raises a ValueError
@@ -43,13 +40,22 @@ class LibraryItem:
 
     @property
     def title(self) -> str:
+        """gets: the title of the librabary item
+        
+        returns: the library items title"""
         return self.__title
     
     @property
     def author(self) -> str:
+        """gets: the name of the author of the library item
+        
+        returns: the name of the library items author"""
         return self.__author
     
     @property
     def genre(self) -> Genre:
+        """gets: The Genre of the library item
+        
+        returns: The genre of the library item"""
         return self.__genre
      
