@@ -14,6 +14,13 @@ class Genre(Enum):
     Example: Genre.NON_FICTION
     """
     FICTION = 0
+    """The genre is fiction"""
+
     NON_FICTION = 1
+    """The genre is non-fiction"""
+
     FANTASY = 2
+    """The genre is fantasy"""
+
     TRUE_CRIME = 3
+    """The genre is ture crime"""
