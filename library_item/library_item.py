@@ -25,7 +25,7 @@ class LibraryItem:
         
         #If the length of the author name is empty raises a ValueError
         if len(author.strip()) == 0:
-            raise ValueError("Title cannot be blank.")
+            raise ValueError("Author cannot be blank.")
         
         #If the genre is not in the enum raises a ValueError
         if genre not in Genre:
