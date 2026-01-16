@@ -33,6 +33,8 @@ class TestLibraryItem(unittest.TestCase):
         self.assertEqual(title, target.title)
         self.assertEqual(author, target.author)
         self.assertEqual(genre, target.genre)
+        self.assertEqual(item_id, target.item_id)
+        self.assertEqual(is_borrowed, target.is_barrowed)
 
 
     def test_init_exception_when_is_borrowed_is_not_bool(self):
@@ -58,6 +60,7 @@ class TestLibraryItem(unittest.TestCase):
 
         #If the expected and the exception raised match the test passes.
         self.assertEqual(expected, actual)
+
 
     def test_init_exception_when_item_id_is_not_int(self):
         """Tests if the propper exception is raised
@@ -134,6 +137,7 @@ class TestLibraryItem(unittest.TestCase):
 
         #If the expected and the exception raised match, the test passes.
         self.assertEqual(expected, actual)
+
 
     def test_init_exception_when_invalid_genre(self):
         """Tests if the propper exception is raised

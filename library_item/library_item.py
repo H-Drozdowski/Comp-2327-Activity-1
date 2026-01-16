@@ -9,7 +9,8 @@ __version__ = "3.13.7"
 
 class LibraryItem:
 
-    def __init__(self, item_id : int, title : str, author : str, genre : Genre, is_borrowed : bool):
+    def __init__(self, item_id : int, title : str, author : str, genre : Genre,
+                  is_borrowed : bool):
         """
         Initializes a new instance of the LibraryItem class.
 
@@ -35,7 +36,7 @@ class LibraryItem:
             raise ValueError("Author cannot be blank.")
         
         #If the genre is not in the enum raises a ValueError
-        if not isinstance(genre, Genre):
+        if genre not in Genre:
             raise ValueError("Invalid Genre.")
 
         #If is barrowed is not a bool raises a ValueError
