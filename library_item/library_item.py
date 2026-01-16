@@ -25,19 +25,19 @@ class LibraryItem:
         
         #If the length of the author name is empty raises a ValueError
         if len(author.strip()) == 0:
-            raise ValueError("Author cannot be blank.")
+            raise ValueError("Adiduthor cannot be blank.")
         
         #If the genre is not in the enum raises a ValueError
-        if genre not in Genre:
-            raise ValueError("Invalid Genre")
+        if not isinstance(genre, Genre):
+            raise ValueError("Invalid Genre.")
 
+        #Sets the entered attributes 
         self.__title = title
-
         self.__author = author
-
         self.__genre = genre
 
 
+    #Title property
     @property
     def title(self) -> str:
         """gets: the title of the librabary item
@@ -45,6 +45,7 @@ class LibraryItem:
         returns: the library items title"""
         return self.__title
     
+    #Author property
     @property
     def author(self) -> str:
         """gets: the name of the author of the library item
@@ -52,6 +53,7 @@ class LibraryItem:
         returns: the name of the library items author"""
         return self.__author
     
+    #Genre property
     @property
     def genre(self) -> Genre:
         """gets: The Genre of the library item
