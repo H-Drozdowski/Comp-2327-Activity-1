@@ -14,11 +14,12 @@ class LibraryItem:
         Initializes a new instance of the LibraryItem class.
 
         args:
-            item_id (int): The id representing the library item
+            item_id (int): An id number to uniquely identify the library item.
             title (str): The title of the library item
             author (str): The title of the author of the library item
             genre (Genre): The genre of the library item
-            is_barrowed (bool): represents if the item is barrowed or not
+            is_barrowed (bool): Identifies whether the library item is 
+            borrowed (True) or available (False).
         """
 
         #If item id is not an int raises a ValueError

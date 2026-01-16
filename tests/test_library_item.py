@@ -35,6 +35,9 @@ class TestLibraryItem(unittest.TestCase):
 
         
     def test_init_exception_when_title_is_blank(self):
+        """Tests if the propper exception is raised
+        when title is blank"""
+
         #Arange
         #These variables will be input into an instance of LibraryItem
         #to test for a ValueError when the title is set blank.
@@ -56,6 +59,9 @@ class TestLibraryItem(unittest.TestCase):
 
 
     def test_init_exception_when_author_is_blank(self):
+        """Tests if the propper exception is raised
+        when author is blank"""
+
         #Arange
         #These variables will be input into an instance of LibraryItem
         #to test for a ValueError when the author is set blank.
@@ -76,6 +82,8 @@ class TestLibraryItem(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_init_exception_when_invalid_genre(self):
+        """Tests if the propper exception is raised
+        when genre is invalid/not the correct input"""
         #Arange
         #These variables will be input into an instance of LibraryItem
         #to test for a ValueError when the genre is set to an invalid
@@ -98,6 +106,7 @@ class TestLibraryItem(unittest.TestCase):
 
 
     def test_title_returns_current_state(self):
+        """Tests if title returns the current state correctly"""
         #Arrange
         #Variables used to create a the target instance with correct values.
         title = "Book Name"
@@ -114,6 +123,7 @@ class TestLibraryItem(unittest.TestCase):
 
 
     def test_author_returns_current_state(self):
+        """Tests if author returns the current state correctly"""
         #Arrange
         #Variables used to create a the target instance with correct values.
         title = "Book Name"
@@ -130,6 +140,7 @@ class TestLibraryItem(unittest.TestCase):
 
 
     def test_genre_returns_current_state(self):
+        """Tests if genre returns the current state correctly"""
         #Arrange
         #Variables used to create a the target instance with correct values.
         title = "Book Name"
