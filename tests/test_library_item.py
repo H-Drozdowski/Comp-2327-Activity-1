@@ -75,17 +75,16 @@ class TestLibraryItem(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_init_exception_when_invalid_genre(self):
+        #Arange
         #These variables will be input into an instance of LibraryItem
         #to test for a ValueError when the genre is set to an invalid
         #value.
-        
-        #Arange
-
         title = "Book Name"
         author = "Author Name"
         genre = "This is wrong"
         
         #Act
+        #Test fails if a ValueError is not raised when target is initialized.
         with self.assertRaises(ValueError) as exception_context:
             target = LibraryItem(title, author, genre)
 
@@ -97,33 +96,51 @@ class TestLibraryItem(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-# def test_init_library_item_initialized() -> None:
-#     #Setup
+    def test_title_returns_current_state(self):
+        #Arrange
+        #Variables used to create a the target instance with correct values.
+        title = "Book Name"
+        author = "Author Name"
+        genre = Genre.FICTION
+        target = LibraryItem(title, author, genre)
 
-#     title = "Book Name"
-#     author = "Author Name"
-#     genre = Genre.FICTION
+        #Act
 
-#     #Invoke
-#     library_item = LibraryItem(title, author, genre)
+        #Assert
+        #If the expected is the same as target.title the test passes.
+        expected = title
+        self.assertEqual(expected, target.title)
 
-#     #Verify
-#     expected = "Book Name"
-#     actual = library_item.title
 
-#     print(f"Expected: {expected}")
-#     print(f"Actual: {actual}\n")
+    def test_author_returns_current_state(self):
+        #Arrange
+        #Variables used to create a the target instance with correct values.
+        title = "Book Name"
+        author = "Author Name"
+        genre = Genre.FICTION
+        target = LibraryItem(title, author, genre)
 
-#     expected = "Author Name"
-#     actual = library_item.author
+        #Act
 
-#     print(f"Expected: {expected}")
-#     print(f"Actual: {actual}\n")
+        #Assert
+        #If the expected is the same as target.author the test passes.
+        expected = author
+        self.assertEqual(expected, target.author)
 
-#     expected = "FICTION"
-#     actual = library_item.genre
 
-#     print(f"Expected: {expected}")
-#     print(f"Actual: {actual}\n")
+    def test_genre_returns_current_state(self):
+        #Arrange
+        #Variables used to create a the target instance with correct values.
+        title = "Book Name"
+        author = "Author Name"
+        genre = Genre.FICTION
+        target = LibraryItem(title, author, genre)
+
+        #Act
+
+        #Assert
+        #if the expected is the same as target.genre the test passes.
+        expected = genre
+        self.assertEqual(expected, target.genre)
 
 
