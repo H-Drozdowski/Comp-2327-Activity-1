@@ -4,12 +4,13 @@ Usage: To execute all tests in the terminal execute
 the following command:
     python -m unittest tests/test_library_item.py
 """
-__author__ = "Hudson Drozdowski"
-__version__ = "3.13.7"
 
 import unittest
 from genre.genre import Genre
 from library_item.library_item import LibraryItem
+
+__author__ = "Hudson Drozdowski"
+__version__ = "3.13.7"
 
 class TestLibraryItem(unittest.TestCase):
     """Test for the library item class"""
