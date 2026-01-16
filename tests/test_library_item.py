@@ -46,7 +46,7 @@ class TestLibraryItem(unittest.TestCase):
         author = "Author_Name"
         genre = Genre.FICTION
         item_id = 1
-        is_borrowed = True      
+        is_borrowed = "Invalid Input"      
 
         #Act
         with self.assertRaises(ValueError) as exception_context:
